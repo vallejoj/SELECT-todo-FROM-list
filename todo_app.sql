@@ -37,3 +37,12 @@ UPDATE tasks SET completed_at= NOW() WHERE title = 'Study SQL';
 SELECT title, description FROM tasks WHERE completed_at IS NULL;
 
 SELECT * FROM tasks ORDER BY created_at DESC;
+
+INSERT INTO tasks (title, description) VALUES ('mistake 1',  'another test entry');
+
+INSERT INTO tasks (title, description) VALUES ('mistake 2',  'another test entry');
+
+INSERT INTO tasks (title, description) VALUES ('mistake 3',  'another test entry');
+
+
+SELECT title FROM tasks WHERE title "mistake";
