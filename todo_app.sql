@@ -1,5 +1,5 @@
 DROP DATABANK IF EXISTS todo_app;
-DROP USER  IF EXISTS michael;
+DROP USER IF EXISTS michael;
 
 CREATE USER michael WITH ENCYPTED PASSWORD 'stonebreaker';
 
@@ -42,7 +42,11 @@ INSERT INTO tasks (title, description) VALUES ('mistake 1',  'another test entry
 
 INSERT INTO tasks (title, description) VALUES ('mistake 2',  'another test entry');
 
-INSERT INTO tasks (title, description) VALUES ('mistake 3',  'another test entry');
+INSERT INTO tasks (title, description,completed_at) VALUES ('mistake three',  'another test entry', NULL);
 
 
-SELECT title FROM tasks WHERE title "mistake";
+SELECT title FROM tasks WHERE title "mistake%";
+
+DELETE FROM tasks WHERE title = 'mistake'
+
+SELECT * FROM tasks ORDER BY title ASC;
